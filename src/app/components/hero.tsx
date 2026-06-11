@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import profileImage from '../../../public/images/profile.jpg';
 import { EmailButton } from './buttonClient';
+import { ImageClient } from './imageClient';
+import { TechStack } from './techStackClient';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
@@ -9,27 +9,28 @@ export const HeroSection = () => {
       <section className="w-full max-w-6xl mx-auto px-6 py-20">
          <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl space-y-6">
-               <div className="inline-flex items-center gap-2 ...">
-                  <div className="w-2 h-2 rounded-full bg-green-500" />
+               <div className="inline-flex items-center gap-2 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-sm text-green-300">
+                  <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                   Disponível para oportunidades
                </div>
 
                <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-bold tracking-tight">José Rodrigues</h1>
+                  <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                     José{' '}
+                     <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                        Rodrigues
+                     </span>
+                  </h1>
 
-                  <h2 className="text-xl md:text-2xl text-slate-300">
-                     Full Stack Developer • React • Node.js
-                  </h2>
+                  <h2 className="text-xl md:text-2xl text-slate-300">Desenvolvedor Full Stack</h2>
 
                   <p className="text-slate-400 leading-relaxed max-w-xl">
-                     Construindo aplicações web modernas com
-                     <span className="text-white font-medium">
-                        {' '}
-                        React, Next.js, Node.js e TypeScript
-                     </span>
-                     . Sempre buscando aprender novas tecnologias e evoluir como desenvolvedor.
+                     Construindo aplicações web modernas. Sempre buscando aprender novas tecnologias
+                     e evoluir como desenvolvedor.
                   </p>
                </div>
+
+               <TechStack />
 
                <div className="flex items-center gap-5 text-2xl text-slate-400 ">
                   <a
@@ -51,19 +52,7 @@ export const HeroSection = () => {
                </div>
             </div>
 
-            <div className="relative">
-               <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl" />
-
-               <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border border-slate-800">
-                  <Image
-                     src={profileImage}
-                     alt="José Rodrigues"
-                     fill
-                     className="object-cover"
-                     placeholder="blur"
-                  />
-               </div>
-            </div>
+            <ImageClient />
          </div>
       </section>
    );

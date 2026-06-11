@@ -1,6 +1,6 @@
-import { EmailButton } from './buttonClient';
-import { ImageClient } from './imageClient';
-import { TechStack } from './techStackClient';
+import { EmailButton } from './emailButton';
+import { ImageClient } from './profileImage';
+import { TechStack } from './techBadge';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 

@@ -1,3 +1,6 @@
+import { ProjectCard } from './card';
+import { projects } from '@/data/project';
+
 export const Project = () => {
    return (
       <section className="w-full max-w-6xl mx-auto px-6 py-20">
@@ -20,7 +23,9 @@ export const Project = () => {
             </p>
          </div>
 
-         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Project Cards */}</div>
+         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <ProjectCard data={projects[0]} />
+         </div>
       </section>
    );
 };

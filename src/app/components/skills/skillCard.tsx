@@ -70,7 +70,6 @@ export const SkillCard = ({ data, index }: SkillCardProps) => {
             <div className="flex flex-wrap gap-2">
                {data.technologies.map((tech) => {
                   const techData = techIcons[tech as keyof typeof techIcons];
-
                   const Icon = techData?.icon;
 
                   return (
@@ -96,7 +95,6 @@ export const SkillCard = ({ data, index }: SkillCardProps) => {
                         "
                      >
                         {Icon && <Icon className={techData.className} />}
-
                         {tech}
                      </Badge>
                   );

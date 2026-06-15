@@ -7,14 +7,12 @@ import {
    DialogTitle,
    DialogTrigger,
 } from '@/components/ui/dialog';
-
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-
 import { IoIosArrowForward } from 'react-icons/io';
 import { FaGithub } from 'react-icons/fa';
-
+import { techIcons } from '@/lib/techIcons';
 import type { Project } from '@/types/project';
 
 interface DialogProps {
@@ -77,10 +75,14 @@ export const ProjectDialog = ({ data }: DialogProps) => {
                <h3 className="text-lg font-semibold text-white">Tecnologias utilizadas</h3>
 
                <div className="flex flex-wrap gap-2">
-                  {data.technologies.map((tech) => (
-                     <Badge
-                        key={tech}
-                        className="
+                  {data.technologies.map((tech) => {
+                     const techData = techIcons[tech as keyof typeof techIcons];
+                     const Icon = techData?.icon;
+
+                     return (
+                        <Badge
+                           key={tech}
+                           className="
                            rounded-full
                            border
                            border-violet-500/20
@@ -88,10 +90,12 @@ export const ProjectDialog = ({ data }: DialogProps) => {
                            text-violet-300
                            hover:bg-violet-500/20
                         "
-                     >
-                        {tech}
-                     </Badge>
-                  ))}
+                        >
+                           {Icon && <Icon className={techData.className} />}
+                           {tech}
+                        </Badge>
+                     );
+                  })}
                </div>
             </section>
 

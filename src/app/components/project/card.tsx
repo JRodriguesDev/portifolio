@@ -10,6 +10,7 @@ import type { Project } from '@/types/project';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { ProjectDialog } from './dialog';
+import { techIcons } from '@/lib/techIcons';
 
 interface ProjectProps {
    data: Project;
@@ -42,20 +43,26 @@ export const ProjectCard = ({ data }: ProjectProps) => {
          </CardHeader>
          <CardContent>
             <div className="flex flex-wrap gap-2">
-               {data.technologies.slice(0, 6).map((tech) => (
-                  <Badge
-                     key={tech}
-                     variant="secondary"
-                     className="rounded-full
+               {data.technologies.slice(0, 6).map((tech) => {
+                  const techData = techIcons[tech as keyof typeof techIcons];
+                  const Icon = techData?.icon;
+
+                  return (
+                     <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="rounded-full
                         border
                         border-slate-700
                         bg-slate-900
                         hover:border-slate-500
                         transition-colors"
-                  >
-                     {tech}
-                  </Badge>
-               ))}
+                     >
+                        {Icon && <Icon className={techData.className} />}
+                        {tech}
+                     </Badge>
+                  );
+               })}
             </div>
          </CardContent>
          <CardFooter className="border-t border-slate-800 pt-5 mt-auto">

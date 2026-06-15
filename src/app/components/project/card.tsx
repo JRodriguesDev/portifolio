@@ -6,14 +6,13 @@ import {
    CardHeader,
    CardTitle,
 } from '@/components/ui/card';
-import { IoIosArrowForward } from 'react-icons/io';
-import { Button } from '@/components/ui/button'; 
 import type { Project } from '@/types/project';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
+import { ProjectDialog } from './dialog';
 
 interface ProjectProps {
-   data: Pick<Project, 'title' | 'status' | 'images' | 'shortDescription' | 'technologies'>;
+   data: Project;
 }
 
 export const ProjectCard = ({ data }: ProjectProps) => {
@@ -60,15 +59,7 @@ export const ProjectCard = ({ data }: ProjectProps) => {
             </div>
          </CardContent>
          <CardFooter className="border-t border-slate-800 pt-5 mt-auto">
-            <Button
-               variant="ghost"
-               className="group h-auto p-0 text-slate-400 transition-colors hover:bg-transparent hover:text-sky-400"
-            >
-               Ver detalhes
-               <IoIosArrowForward
-                  className="ml-2 h-4 w-4 transition-all duration-300 group-hover:translate-x-1 group-hover:text-sky-400"
-               />
-            </Button>
+            <ProjectDialog data={data}/>
          </CardFooter>
       </Card>
    );

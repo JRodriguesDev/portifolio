@@ -25,7 +25,7 @@ export const Project = () => {
 
          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
             {projects.map((el, i) => (
-               <ProjectCard key={i} data={el}/>
+               <ProjectCard key={i} data={el} />
             ))}
          </div>
       </section>

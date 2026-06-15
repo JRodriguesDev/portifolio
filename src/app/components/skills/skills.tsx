@@ -1,6 +1,8 @@
 'use client';
 
 import { motion } from 'motion/react';
+import { SkillCard } from './skillCard';
+import { skills } from '@/data/skiils';
 
 export const Skills = () => {
    return (
@@ -31,7 +33,22 @@ export const Skills = () => {
             </p>
          </motion.div>
 
-         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">{/* Skill Cards */}</div>
+         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {skills.map((skill, i) => (
+               <motion.div
+                  key={skill.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                     duration: 0.5,
+                     delay: i * 0.15,
+                  }}
+               >
+                  <SkillCard data={skill} index={i} />
+               </motion.div>
+            ))}
+         </div>
       </section>
    );
 };

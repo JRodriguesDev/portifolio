@@ -1,12 +1,23 @@
+'use client';
+
+import { motion } from 'motion/react';
+
 import { ProjectCard } from './card';
 import { projects } from '@/data/project';
 
 export const Project = () => {
    return (
       <section className="w-full max-w-6xl mx-auto px-6 py-20">
-         <div className="max-w-3xl space-y-4">
+         <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl space-y-4"
+         >
             <div className="flex items-center gap-3">
                <div className="h-px w-10 bg-blue-500" />
+
                <span className="text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
                   Projetos
                </span>
@@ -21,11 +32,22 @@ export const Project = () => {
                stack, arquitetura de software, autenticação, integrações com APIs e boas práticas de
                desenvolvimento.
             </p>
-         </div>
+         </motion.div>
 
          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {projects.map((el, i) => (
-               <ProjectCard key={i} data={el} />
+            {projects.map((project, i) => (
+               <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                     duration: 0.5,
+                     delay: i * 0.15,
+                  }}
+               >
+                  <ProjectCard data={project} />
+               </motion.div>
             ))}
          </div>
       </section>

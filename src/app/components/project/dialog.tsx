@@ -30,24 +30,19 @@ export const ProjectDialog = ({ data }: DialogProps) => {
                className="group h-auto cursor-pointer p-0 text-slate-400 transition-colors hover:bg-transparent hover:text-sky-400"
             >
                Ver detalhes
-
                <IoIosArrowForward className="ml-2 h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
             </Button>
          </DialogTrigger>
 
-         <DialogContent className="max-h-[90vh] overflow-y-auto border-slate-800 bg-slate-950 sm:max-w-3xl">
+         <DialogContent className="max-h-[90vh] overflow-y-auto no-scrollbar border-slate-800 bg-slate-950 sm:max-w-3xl">
             <DialogHeader className="space-y-5">
                <Badge className="w-fit rounded-full border border-green-500/20 bg-green-500/10 text-green-300 hover:bg-green-500/10">
                   {data.status}
                </Badge>
 
-               <DialogTitle className="text-3xl font-bold tracking-tight">
-                  {data.title}
-               </DialogTitle>
+               <DialogTitle className="text-3xl font-bold tracking-tight">{data.title}</DialogTitle>
 
-               <p className="max-w-2xl leading-7 text-slate-400">
-                  {data.shortDescription}
-               </p>
+               <p className="max-w-2xl leading-7 text-slate-400">{data.shortDescription}</p>
             </DialogHeader>
 
             {/* Futuramente coloque o carrossel de imagens aqui */}
@@ -55,9 +50,7 @@ export const ProjectDialog = ({ data }: DialogProps) => {
             <Separator className="my-2 bg-slate-800" />
 
             <section className="space-y-4">
-               <h3 className="text-lg font-semibold text-white">
-                  Principais destaques
-               </h3>
+               <h3 className="text-lg font-semibold text-white">Principais destaques</h3>
 
                <div className="flex flex-wrap gap-2">
                   {data.highlights.map((highlight) => (
@@ -81,9 +74,7 @@ export const ProjectDialog = ({ data }: DialogProps) => {
             <Separator className="my-2 bg-slate-800" />
 
             <section className="space-y-4">
-               <h3 className="text-lg font-semibold text-white">
-                  Tecnologias utilizadas
-               </h3>
+               <h3 className="text-lg font-semibold text-white">Tecnologias utilizadas</h3>
 
                <div className="flex flex-wrap gap-2">
                   {data.technologies.map((tech) => (
@@ -107,9 +98,7 @@ export const ProjectDialog = ({ data }: DialogProps) => {
             <Separator className="my-2 bg-slate-800" />
 
             <section className="space-y-4">
-               <h3 className="text-lg font-semibold text-white">
-                  Foco de aprendizado
-               </h3>
+               <h3 className="text-lg font-semibold text-white">Foco de aprendizado</h3>
 
                <div className="flex flex-wrap gap-2">
                   {data.learningFocus.map((item) => (
@@ -141,11 +130,7 @@ export const ProjectDialog = ({ data }: DialogProps) => {
                      hover:bg-sky-400
                   "
                >
-                  <a
-                     href={data.github}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                  >
+                  <a href={data.github} target="_blank" rel="noopener noreferrer">
                      <FaGithub className="mr-2" />
                      Ver no GitHub
                   </a>

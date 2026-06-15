@@ -59,7 +59,7 @@ export const ProjectCard = ({ data }: ProjectProps) => {
             </div>
          </CardContent>
          <CardFooter className="border-t border-slate-800 pt-5 mt-auto">
-            <ProjectDialog data={data}/>
+            <ProjectDialog data={data} />
          </CardFooter>
       </Card>
    );

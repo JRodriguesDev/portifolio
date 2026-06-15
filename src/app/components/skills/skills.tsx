@@ -25,16 +25,13 @@ export const Skills = () => {
             </h2>
 
             <p className="text-base md:text-lg leading-8 text-slate-400">
-               Busco consolidar conhecimentos através da prática, desenvolvendo
-               aplicações full stack e explorando conceitos de arquitetura,
-               autenticação, bancos de dados, integrações com APIs e boas
-               práticas de desenvolvimento.
+               Busco consolidar conhecimentos através da prática, desenvolvendo aplicações full
+               stack e explorando conceitos de arquitetura, autenticação, bancos de dados,
+               integrações com APIs e boas práticas de desenvolvimento.
             </p>
          </motion.div>
 
-         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Skill Cards */}
-         </div>
+         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">{/* Skill Cards */}</div>
       </section>
    );
 };

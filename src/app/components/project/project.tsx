@@ -23,8 +23,10 @@ export const Project = () => {
             </p>
          </div>
 
-         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <ProjectCard data={projects[0]} />
+         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {projects.map((el, i) => (
+               <ProjectCard key={i} data={el}/>
+            ))}
          </div>
       </section>
    );

@@ -46,7 +46,7 @@ export const projects: Project[] = [
       title: 'API E-commerce',
       shortDescription:
          'Backend para um ecossistema de e-commerce desenvolvido com foco em arquitetura, autenticação, pagamentos, cache e integração com Stripe.',
-      images: ['/images/projects/api-swagger.png'],
+      images: ['/images/apiBackend.png'],
       github: 'https://github.com/JRodriguesDev/api_e-commerce',
       readme: 'https://github.com/JRodriguesDev/api_e-commerce#readme',
       featured: false,

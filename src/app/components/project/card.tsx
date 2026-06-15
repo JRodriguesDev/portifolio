@@ -7,7 +7,7 @@ import {
    CardTitle,
 } from '@/components/ui/card';
 import { IoIosArrowForward } from 'react-icons/io';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; 
 import type { Project } from '@/types/project';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
@@ -20,9 +20,9 @@ export const ProjectCard = ({ data }: ProjectProps) => {
    return (
       <Card
          className="overflow-hidden rounded-2xl py-0 group
-            overflow-hidden
-            rounded-2xl
-            py-0
+            flex
+            flex-col
+            h-full
             transition-all
             duration-300
             hover:-translate-y-1
@@ -59,7 +59,7 @@ export const ProjectCard = ({ data }: ProjectProps) => {
                ))}
             </div>
          </CardContent>
-         <CardFooter className="border-t border-slate-800 pt-5">
+         <CardFooter className="border-t border-slate-800 pt-5 mt-auto">
             <Button
                variant="ghost"
                className="group h-auto p-0 text-slate-400 transition-colors hover:bg-transparent hover:text-sky-400"

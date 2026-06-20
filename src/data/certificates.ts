@@ -11,7 +11,7 @@ export const certificates: Certificates[] = [
 
       category: 'TI Support',
 
-      pdf: '/certificates/google-it-support.pdf',
+      pdf: '/certificates/Google IT.pdf',
 
       skills: [
          'Linux',
@@ -37,7 +37,7 @@ export const certificates: Certificates[] = [
 
       category: 'Networking',
 
-      pdf: '/certificates/network-support-security.pdf',
+      pdf: '/certificates/Network_Support_and_Security_certificate.pdf',
 
       skills: [
          'Network Troubleshooting',
@@ -61,7 +61,7 @@ export const certificates: Certificates[] = [
 
       category: 'Networking',
 
-      pdf: '/certificates/network-addressing-troubleshooting.pdf',
+      pdf: '/certificates/Network_Addressing_and_Basic_Troubleshooting_certificate.pdf',
 
       skills: [
          'IPv4/IPv6',
@@ -85,7 +85,7 @@ export const certificates: Certificates[] = [
 
       category: 'Networking',
 
-      pdf: '/certificates/networking-basics.pdf',
+      pdf: '/certificates/networking_basics_certificate.pdf',
 
       skills: [
          'IPv4',
@@ -109,7 +109,7 @@ export const certificates: Certificates[] = [
 
       category: 'Networking',
 
-      pdf: '/certificates/network-devices-initial-configuration.pdf',
+      pdf: '/certificates/Networking_Devices_and_Initial_Configuration_certificate.pdf',
 
       skills: ['Cisco IOS', 'IPv4 Subnetting', 'DHCP', 'DNS', 'ARP', 'Network Design'],
 

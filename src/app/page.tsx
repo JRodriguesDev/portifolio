@@ -1,6 +1,7 @@
 import { HeroSection } from './components/hero/hero';
 import { Project } from './components/project/project';
 import { Skills } from './components/skills/skills';
+import { Certificates } from './components/certificates/certificates';
 
 export default function Home() {
    return (
@@ -8,6 +9,7 @@ export default function Home() {
          <HeroSection />
          <Project />
          <Skills />
+         <Certificates />
       </main>
    );
 }

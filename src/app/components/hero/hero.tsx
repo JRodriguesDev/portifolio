@@ -1,4 +1,4 @@
-import { EmailButton } from './emailButton';
+import { CVButton } from './cvButton';
 import { ImageClient } from './profileImage';
 import { TechStack } from './techBadge';
 
@@ -48,7 +48,7 @@ export const HeroSection = () => {
                   >
                      <FaLinkedin />
                   </a>
-                  <EmailButton />
+                  <CVButton />
                </div>
             </div>
 

@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'motion/react';
-import {certificates} from '@/data/certificates'
-import {CertificateCard} from './card'
+import { certificates } from '@/data/certificates';
+import { CertificateCard } from './card';
 
 export const Certificates = () => {
    return (
@@ -34,7 +34,20 @@ export const Certificates = () => {
          </motion.div>
 
          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-
+            {certificates.map((certificate, i) => (
+               <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                     duration: 0.5,
+                     delay: i * 0.15,
+                  }}
+               >
+                  <CertificateCard data={certificate} />
+               </motion.div>
+            ))}
          </div>
       </section>
    );

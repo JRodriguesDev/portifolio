@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import profileImage from '@/../public/images/profile.jpg';
+import profileImage from '@/../public/images/profile.webp';
 import * as motion from 'motion/react-client';
 
 export const ImageClient = () => {

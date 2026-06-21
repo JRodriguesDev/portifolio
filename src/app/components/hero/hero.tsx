@@ -1,6 +1,7 @@
 import { CVButton } from './cvButton';
 import { ImageClient } from './profileImage';
 import { TechStack } from './techBadge';
+import { EmailButton } from './emailButton';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
@@ -48,6 +49,8 @@ export const HeroSection = () => {
                   >
                      <FaLinkedin />
                   </a>
+
+                  <EmailButton />
                   <CVButton />
                </div>
             </div>

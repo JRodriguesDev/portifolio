@@ -10,9 +10,11 @@ export const CVButton = () => {
    };
 
    return (
-      <Button variant="outline" onClick={handleDownloadCV} className="cursor-pointer">
-         <FaFilePdf />
-         Baixar CV
+      <Button asChild variant="outline" className="cursor-pointer">
+         <a href="/cv/CurriculoEst.docx" download onClick={handleDownloadCV}>
+            <FaFilePdf />
+            Baixar CV
+         </a>
       </Button>
    );
 };

@@ -9,7 +9,7 @@ export const projects: Project[] = [
       github: 'https://github.com/JRodriguesDev/Ecommerce',
       readme: 'https://github.com/JRodriguesDev/Ecommerce#readme',
       featured: true,
-      status: 'Concluído (Projeto de Estudos)',
+      status: 'Concluído',
       highlights: [
          'Stripe Custom Checkout',
          'Sistema de Assinaturas',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       github: 'https://github.com/JRodriguesDev/api_e-commerce',
       readme: 'https://github.com/JRodriguesDev/api_e-commerce#readme',
       featured: false,
-      status: 'Projeto de Estudos',
+      status: 'Concluido',
       highlights: [
          'Integração com Stripe',
          'Sistema de Assinaturas',

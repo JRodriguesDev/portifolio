@@ -4,28 +4,27 @@ export const aboutHighlights: AboutHighlight[] = [
    {
       title: 'Formação',
       value: 'ADS',
-      description:
-         'Cursando Análise e Desenvolvimento de Sistemas com foco em desenvolvimento de software e boas práticas.',
+      description: 'Cursando Análise e Desenvolvimento de Sistemas pela Unicesumar.',
    },
 
    {
       title: 'Desenvolvimento',
       value: 'Full Stack',
       description:
-         'Experiência prática com React, Next.js, Node.js, TypeScript, PostgreSQL e arquitetura moderna de aplicações.',
+         'Experiência prática com React, Next.js, Node.js, TypeScript e bancos de dados relacionais.',
    },
 
    {
       title: 'Aprendizado',
       value: 'Projetos Práticos',
       description:
-         'Utilizo projetos reais para consolidar conhecimentos e aprofundar habilidades técnicas.',
+         'Gosto de aprender construindo projetos reais para aplicar e consolidar novos conhecimentos.',
    },
 
    {
       title: 'Objetivo',
-      value: 'Estágio / Júnior',
+      value: 'Estágio',
       description:
-         'Buscando oportunidades para contribuir com equipes de tecnologia e continuar evoluindo profissionalmente.',
+         'Em busca da primeira oportunidade profissional na área de desenvolvimento de software.',
    },
 ];

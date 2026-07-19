@@ -48,8 +48,7 @@ export const About = () => {
 
                <p>
                   Atualmente estou focado em continuar evoluindo tecnicamente e buscando
-                  oportunidades de estágio ou desenvolvimento júnior para aplicar meus conhecimentos
-                  em projetos reais e colaborar com equipes de tecnologia.
+                  oportunidades de estágio.
                </p>
             </div>
          </motion.div>

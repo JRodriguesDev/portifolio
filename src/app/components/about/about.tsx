@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { AboutCard } from './card';
-import { aboutHighlights } from '@/data/about';
 
 export const About = () => {
    return (
@@ -45,30 +43,8 @@ export const About = () => {
                   redes por meio de certificações e estudos complementares, desenvolvendo uma visão
                   mais ampla sobre o funcionamento de sistemas e ambientes corporativos.
                </p>
-
-               <p>
-                  Atualmente estou focado em continuar evoluindo tecnicamente e buscando
-                  oportunidades de estágio.
-               </p>
             </div>
          </motion.div>
-
-         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {aboutHighlights.map((item, i) => (
-               <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{
-                     duration: 0.5,
-                     delay: i * 0.15,
-                  }}
-               >
-                  <AboutCard data={item} />
-               </motion.div>
-            ))}
-         </div>
       </section>
    );
 };

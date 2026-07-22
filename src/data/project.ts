@@ -4,7 +4,7 @@ export const projects: Project[] = [
    {
       title: 'E-commerce Full Stack',
       shortDescription:
-         'Projeto full stack desenvolvido para explorar arquiteturas modernas com Next.js 16, React 19, Stripe, Auth.js e PostgreSQL, colocando em prática autenticação, pagamentos, webhooks e boas práticas de desenvolvimento.',
+         'Um projeto de estudo prático criado para aplicar conceitos de desenvolvimento web na criação de um e-commerce Full Stack. O foco do repositório é documentar meu aprendizado ao estruturar integrações de pagamentos, gerenciar o estado e o cache da aplicação e implementar uma arquitetura de dados segura com TypeScript, Next.js e PostgreSQL.',
       images: ['/images/Ecommerce1.webp'],
       github: 'https://github.com/JRodriguesDev/Ecommerce',
       readme: 'https://github.com/JRodriguesDev/Ecommerce#readme',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
    {
       title: 'API E-commerce',
       shortDescription:
-         'Backend para um ecossistema de e-commerce desenvolvido com foco em arquitetura, autenticação, pagamentos, cache e integração com Stripe.',
+         'Este projeto é o resultado de um estudo sobre o desenvolvimento de ecossistemas de e-commerce. O objetivo principal foi construir um backend sólido e organizado, focado na gestão de pagamentos e assinaturas, aplicando boas práticas de arquitetura e segurança.',
       images: ['/images/apiBackend.webp'],
       github: 'https://github.com/JRodriguesDev/api_e-commerce',
       readme: 'https://github.com/JRodriguesDev/api_e-commerce#readme',
